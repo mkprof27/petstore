@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: petstore-tests
 
     steps:
       - name: Checkout code
@@ -23,10 +26,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run tests
-        run: pytest petstore-tests/tests/ -v --alluredir=allure-results
+        run: pytest tests/ -v --alluredir=allure-results
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: allure-results
+          path: petstore-tests/allure-results
