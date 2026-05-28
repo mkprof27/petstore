@@ -1,0 +1,15 @@
+{
+  "id": 9223372036854775807,
+  "category": {
+    "id": 5,
+    "name": "Cats"
+  },
+  "photoUrls": [],
+  "tags": [
+    {
+      "id": 2,
+      "name": "indoor"
+    }
+  ],
+  "status": "pending"
+}
